@@ -5,8 +5,8 @@ import Client from "shopify-buy";
 const ShopContext = React.createContext();
 
 const client = Client.buildClient({
-  domain: process.env.REACT_APP_SHOPIFY_API_TOKEN,
-  storefrontAccessToken: process.env.REACT_APP_SHOPIFY_DOMAIN,
+  storefrontAccessToken: process.env.REACT_APP_SHOPIFY_API_TOKEN,
+  domain: process.env.REACT_APP_SHOPIFY_DOMAIN,
 });
 
 class ShopProvider extends Component {
@@ -61,7 +61,23 @@ class ShopProvider extends Component {
   openMenu = () => {};
 
   render() {
-    return <ShopContext.Provider>{this.props.children}</ShopContext.Provider>;
+    return (
+      <ShopContext.Provider
+        value={{
+          ...this.state,
+          fetchAllProducts: this.fetchAllProducts,
+          fetchProductWithHandle: this.fetchProductWithHandle,
+          addItemToCheckout: this.addItemToCheckout,
+          removeLineItem: this.removeLineItem,
+          closeCart: this.closeCart,
+          openCart: this.openCart,
+          closeMenu: this.closeMenu,
+          openMenu: this.openMenu,
+        }}
+      >
+        {this.props.children}
+      </ShopContext.Provider>
+    );
   }
 }
 
