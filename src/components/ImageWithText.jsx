@@ -25,7 +25,7 @@ export const ImageWithText = ({ button, reverse, image, text, heading }) => {
               color="white"
               _hover={{ opacity: "70%" }}
             >
-              チェックする
+              Check Now
             </Button>
           ) : null}
         </Box>

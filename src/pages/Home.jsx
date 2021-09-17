@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Hero } from "../components/Hero";
 import { ImageWithText } from "../components/ImageWithText";
+import { RichText } from "../components/RichText";
 
 import { ShopContext } from "../context/shopContext";
 
@@ -20,7 +21,7 @@ export const Home = () => {
       <Grid templateColumns="repeat(3, 1fr)">
         {products.map((product) => (
           <Link to={`/products/${product.handle}`} key={product.title}>
-            <Box _hover={{ opacity: "80%" }} textAlign="center" pb="2rem">
+            <Box _hover={{ opacity: "80%" }} textAlign="center">
               <Image src={product.images[0].src} />
               <Text fontWeight="semibold" pt="1rem">
                 {product.title}
@@ -30,6 +31,7 @@ export const Home = () => {
           </Link>
         ))}
       </Grid>
+      <RichText heading="Enjoy Your BathTime!" text="" />
       <ImageWithText
         button
         image="https://cdn.shopify.com/s/files/1/0472/5705/9496/files/premium-bath-bombs.jpg?v=1610066758"

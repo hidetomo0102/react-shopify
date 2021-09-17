@@ -12,6 +12,7 @@ export const Hero = () => {
         src="https://cdn.shopify.com/s/files/1/0472/5705/9496/files/Bath_Bomb_-_Product-4_-_nobg_1.png?v=1610055851.jpg"
       />
       <Text
+        className="scale-up-bottom"
         position="absolute"
         bottom="20%"
         w="100%"
@@ -20,7 +21,7 @@ export const Hero = () => {
         fontWeight="bold"
         fontSize="4rem"
       >
-        バスボムでお風呂タイムを楽しく！
+        Bath Bomb to Enrich your Life!
       </Text>
       <Center>
         <Button
