@@ -27,7 +27,6 @@ export const Footer = () => {
           textAlign="center"
           color="white"
           w="100%"
-          borderTop="1px solid white"
           p="1rem"
         >
           ©︎ Copyright hidetomo-react.myshopify.com
