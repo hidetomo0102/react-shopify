@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Cart } from "./components/Cart";
+import { Footer } from "./components/Footer";
 import { NavBar } from "./components/NavBar";
 import { NavMenu } from "./components/NavMenu";
 import { Home } from "./pages/Home";
@@ -20,6 +21,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
+        <Footer />
       </BrowserRouter>
     </div>
   );
